@@ -1,18 +1,51 @@
 <!DOCTYPE html>
-<html lang="env">
-    <head>
-
-    </head>
-    <body>
-        <flowise-fullchatbot></flowise-fullchatbot>
-        <script type="module">
-            import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
-            Chatbot.initFull({
-                chatflowid: "7c25655c-5015-4251-a8ae-029d29c80a32",
-                apiHost: "https://flowise-8w8h.onrender.com",
-            })
-        </script>
-
-    </body>    
-    
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Static Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1em 0;
+        }
+        main {
+            padding: 2em;
+        }
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1em 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Simple Static Website</h1>
+    </header>
+    <main>
+        <p>This is a basic static website deployed on Render.</p>
+        <button onclick="displayMessage()">Click Me!</button>
+        <p id="message"></p>
+    </main>
+    <footer>
+        <p>&copy; 2025 My Simple Static Website</p>
+    </footer>
+    <script>
+        function displayMessage() {
+            document.getElementById('message').innerText = 'Hello, World!';
+        }
+    </script>
+</body>
 </html>
